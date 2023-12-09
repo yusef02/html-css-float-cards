@@ -1,7 +1,81 @@
+:root {
+  --title-color: #e4316f;
+  --primary-color: #0f0e17;
+  --s-size: 20px;
+  --m-size: 30px;
+  --l-size: 50px;
+  --xl-size: 80px;
+}
+
 /* RESET */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
+}
+
+/* UTILS */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--m-size) var(--s-size);
+}
+
+/* MAIN */
+
+/* title and description */
+
+main .container:first-child {
+  text-align: center;
+}
+.container .title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--title-color);
+  margin-bottom: var(--l-size);
+}
+.container desc {
+  color: var(--primary-color);
+}
+
+/* cards container */
+
+.container__row {
+  margin: 0 calc(-1 * var(--s-size));
+}
+.container__row__column {
+  float: left;
+  min-width: 400px;
+  width: calc(100% / 3);
+}
+.container__row__column__card {
+  margin: var(--l-size) var(--s-size);
+  height: 100px;
+  color: white;
+  background-color: var(--primary-color);
+
+  box-shadow: 5px 5px 5px rgb(200, 200, 200);
+}
+
+.container__row__column__card__pfp {
+  height: 100px;
+  display: block;
+  float: left;
+}
+.container__row__column__card__desc {
+  padding: 15px;
+  float: left;
+}
+.container__row__column__card__desc__mansion {
+  display: block;
+}
+.container__row__column__card__desc__email {
+  display: block;
 }
